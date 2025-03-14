@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Category</title>
+
+    <base href="http://localhost:3000/Dashboard/" />
+
+    <link rel="stylesheet" href="./css/general.css">
+
+    <link rel="stylesheet" href="./css/adminNavbar.css">
+    <script src="./js/adminNavbar.js"></script>
+
+    <link rel="stylesheet" href="./css/categories/addCategories.css">
+    <script src="./js/categories.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <script> loadAdminNavbar() </script>
+    <main class="content">
+        <div id="notification" class="notification hidden"></div>
+        <h1>Add New Category</h1>
+
+        <div class="form-container">
+            <label for="categoryName">Category Name:</label>
+            <input type="text" id="categoryName" placeholder="Enter category name">
+
+            <label for="categoryImage">Category Image URL:</label>
+            <input type="text" id="categoryImage" placeholder="Enter image URL">
+
+            <div class="btn" onclick="createCategory()">Create Category</div>
+        </div>
+    </main>
+</body>
+
+</html>

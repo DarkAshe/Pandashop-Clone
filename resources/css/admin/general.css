@@ -1,0 +1,144 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    
+}
+
+/* Layout */
+body {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 2rem;
+    margin-left: 15rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+    .content {
+        margin-left: 0;
+    }
+}
+
+
+/* Notification Styling */
+.notification {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: bold;
+    display: block;
+}
+
+.success {
+    background-color: #28a745;
+}
+
+.error {
+    background-color: #dc3545;
+
+}
+
+.hidden {
+    display: none;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 0.5rem;
+    display: block;
+    color: #555;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.25rem;
+    border: 0.125rem solid #ccc;
+    border-radius: 0.5rem;
+}
+
+.btn {
+    padding: 0.75rem;
+    margin-top: 1rem;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}   
+
+.action-btn {
+    display: inline-block;
+    flex-grow: 1;
+}
+
+.edit-btn {
+    background-color: #ffc107;
+    color: black;
+}
+
+.edit-btn:hover {
+    background-color: #e0a800;
+}   
+
+a{
+    color: white;
+    text-decoration: none;
+}
+
+/*
+    FOR DISPLAYING  DATA IN TABLES
+*/
+    
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+tr:hover {
+    background-color: #f4f4f4;
+}
+
+.delete-btn {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}

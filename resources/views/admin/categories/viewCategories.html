@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - View Categories</title>
+
+    <base href="http://localhost:3000/Dashboard/" />
+
+    <link rel="stylesheet" href="./css/general.css">
+
+    <link rel="stylesheet" href="./css/adminNavbar.css">
+    <script defer src="./js/adminNavbar.js"></script>
+
+    <link rel="stylesheet" href="./css/viewCategories.css">
+    <script src="./js/categories.js"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="loadAdminNavbar"></div>
+    <main class="content">
+        <div id="notification" class="notification hidden"></div>
+        <h1>Categories</h1>
+        <table id="categoriesTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Image</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </main>
+
+    <script> loadCategories() </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="./css/general.css">
+    <script src="./js/general.js"></script>
+
+    <link rel="stylesheet" href="./css/navbar.css">
+    <script src="./js/navbar.js"></script>
+
+    <link rel="stylesheet" href="./css/home.css">
+    <script src="./js/home.js"></script>
+</head>
+
+<body>
+    <div id="loadNavbar"></div>
+    <main class="container">
+        <div class="banner">
+            <img src="./img/banner.png" alt="Banner">
+        </div>
+        <div class="displayGaleries">
+            <div>
+                <h2>Categories</h2>
+                <div class="product-gallery">
+                    <div id="loadCategories"></div>
+                </div>
+            </div>
+            <div>
+                <div style="display:flex; align-items: baseline; gap: 1rem">
+                    <h2>Newly Added</h2>
+                    <a href="productsNewAdded.html"><span>Show all...</span></a>
+                </div>
+                <div class="product-gallery">
+                    <div id="loadRecentProducts"></div>
+                </div>
+            </div>
+            <div>
+                <div style="display:flex; align-items: baseline; gap: 1rem">
+                    <h2>Products on Sale</h2>
+                    <a href="productsOnSale.html"><span>Show all...</span></a>
+                </div>
+                <div class="product-gallery">
+                    <div id="loadDiscountedProducts"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            © 2025 Magazin online Pandashop.md | Transformă cumpărăturile în plăcere
+        </div>
+    </footer>
+</body>
+
+</html>

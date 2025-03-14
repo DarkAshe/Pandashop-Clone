@@ -1,0 +1,49 @@
+.left {
+    flex: 2;
+}
+
+.right {
+    flex: 1;
+    position: sticky;
+    top: 5rem;
+}
+
+.price-box {
+    background-color: #f8f8f8;
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+.price {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.spec-item {
+    display: flex;
+    padding: 0.5rem 1rem;
+    border-bottom: 0.125rem solid #ddd;
+}
+
+.spec-key {
+    min-width: 70%;
+}
+
+.spec-value {
+    color: #555;
+}
+
+.row-even {
+    background-color: #f4f4f4;
+}
+
+.row-odd {
+    background-color: white;
+}
+
+@media (max-width: 768px) {
+    .left, .right {
+        flex: 1 1 100%;
+    }
+}

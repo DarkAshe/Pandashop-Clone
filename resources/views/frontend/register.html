@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+
+    <base href="http://localhost:3000/" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="./css/general.css">
+    <script src="./js/general.js"></script>
+
+    <link rel="stylesheet" href="./css/navbar.css">
+    <script src="./js/navbar.js"></script>
+
+    <script src="./js/auth.js"></script>
+    <link rel="stylesheet" href="./css/auth.css">
+</head>
+
+<body>
+    <div id="loadNavbar"></div>
+    <main class="container">
+        <div class="auth-container">
+            <div id="notification" class="notification hidden"></div>
+            <h2>Register</h2>
+            <form id="registerForm">
+                <input type="text" id="username" placeholder="Username" required>
+                <input type="email" id="email" placeholder="E-mail" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="password" id="confirmPassword" placeholder="Repeat Password" required>
+                <a href="login.html">Log in</a>
+                <div class="btn" onclick="registerUser()">Create Account</div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            © 2007-2025 Magazin online Pandashop.md | Transformă cumpărăturile în plăcere
+        </div>
+    </footer>
+</body>
+
+</html>
