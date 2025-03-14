@@ -1,5 +1,5 @@
 async function updateCategoryTitle(){
-    const categoryId = new URL(window.location.href).searchParams.get("categoryId");
+    const categoryId = new URL(window.location.href).searchParams.get("id");
     
     const query = `{ category(id: ${categoryId}) { name } }`;
     try {
@@ -7,41 +7,31 @@ async function updateCategoryTitle(){
         const category = data.category;
 
         document.getElementById("categoryTitle").innerText = "Browing in " + category.name;
-        document.getElementById("categoryImage").value = category.image;
     } catch (error) {
         console.error("Error fetching category:", error);
     }
 }
 
 async function loadProductsByCategory() {
-    const categoryId = new URL(window.location.href).searchParams.get("categoryId");
+    const categoryId = new URL(window.location.href).searchParams.get("id");
 
     if (!categoryId) {
-        console.error("Category ID not found in the URL.");
-        return;
+        console.error("Category ID not found in the URL.")
+        return
     }
 
-    const query = `{
-        products(filter: { categoryId: ${categoryId} }) { 
-            id 
-            name 
-            image 
-            originalPrice 
-            discountPrice 
-        } 
-    }`;
+    const query = `{ products(filter: { categoryId: ${categoryId} }) { name image originalPrice discountPrice } }`
 
     try {
-        const scriptTag = document.currentScript;
-
-        const data = await fetchGraphQL(query, "GET");
-        const products = data.products;
+        const data = await fetchGraphQL(query, "GET")
+        const products = data.products
 
         if (!products.length) {
-            console.warn("No products found for this category.");
-            return;
+            console.warn("No products found for this category.")
+            return
         }
 
+        const productGallery = document.querySelector(".product-gallery")
         for (const product of products) {
             const contentToInsert = `
                 <div class="product-card">
@@ -52,11 +42,14 @@ async function loadProductsByCategory() {
                     <span class="price">${product.originalPrice} MDL</span>
                     <div class="btn">Add to Cart</div>
                 </div>
-            `;
-            scriptTag.insertAdjacentHTML('afterend', contentToInsert);
+            `
+            productGallery.insertAdjacentHTML('beforeend', contentToInsert)
         }
         
     } catch (error) {
-        console.error("Error loading products:", error);
+        console.error("Error loading products:", error)
     }
 }
+
+updateCategoryTitle()
+loadProductsByCategory()

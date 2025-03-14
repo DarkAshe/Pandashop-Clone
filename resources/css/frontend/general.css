@@ -15,10 +15,6 @@
     flex-direction: column;
 }
 
-.banner img {
-    width: 100%;
-}
-
 footer {
     background-color: #ecf4f4;
     padding: 0.25rem 0;
@@ -54,6 +50,17 @@ a{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.displayGaleries{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem 0;
+} 
+
+.banner img {
+    width: 100%;
 }
 
 .product-card img {

@@ -8,20 +8,21 @@
 
     <base href="http://localhost:3000/Dashboard/" />
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
     <link rel="stylesheet" href="./css/general.css">
+    <script defer src="./js/general.js"></script>
 
     <link rel="stylesheet" href="./css/adminNavbar.css">
     <script defer src="./js/adminNavbar.js"></script>
 
     <link rel="stylesheet" href="./css/viewCategories.css">
-    <script src="./js/categories.js"></script>
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="./js/categories.js"></script>
 </head>
 
 <body>
-    <div id="loadAdminNavbar"></div>
+    <nav></nav>
     <main class="content">
         <div id="notification" class="notification hidden"></div>
         <h1>Categories</h1>
@@ -37,8 +38,6 @@
             <tbody></tbody>
         </table>
     </main>
-
-    <script> loadCategories() </script>
 </body>
 
 </html>

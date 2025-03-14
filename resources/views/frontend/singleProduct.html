@@ -9,27 +9,40 @@
     <base href="http://localhost:3000/" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
     <link rel="stylesheet" href="./css/general.css">
-    <script src="./js/general.js"></script>
-    
+    <script defer src="./js/general.js"></script>
+
     <link rel="stylesheet" href="./css/navbar.css">
-    <script src="./js/navbar.js"></script>
+    <script defer src="./js/navbar.js"></script>
 
     <link rel="stylesheet" href="./css/singleProduct.css">
-    <script src="./js/singleProduct.js"></script>
+    <script defer src="./js/singleProduct.js"></script>
 </head>
 
 <body>
-    <div id="loadNavbar"></div>
+    <nav></nav>
     <main class="container">
-        <div id="loadSingleProduct"></div>
+        <h1 id="productName">Product Name</h1>
+        <div style="display: flex;flex-wrap: wrap;align-items: flex-start;">
+            <div class="left">
+                <img id="productImage" src="./img/placeholder.png" alt="productImage" style="max-width: 50%;">
+                <div id="productSpecifications">
+                    <h2>Specifications</h2>
+                    <div id="specsContainer"></div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="price-box">
+                    <p id="produtPrice" class="price">0 MDL</p>
+                    <a href="#" class="btn">Buy</a>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
-        <div class="container">
-            © 2007-2025 Magazin online Pandashop.md | Transformă cumpărăturile în plăcere
-        </div>
+        <div class="container">© 2025 Online Shop | Pandashop.md</div>
     </footer>
 </body>
 

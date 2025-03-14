@@ -1,13 +1,5 @@
 async function loadProducts() {
-    const query = `{ 
-        products { 
-            id
-            name
-            image
-            originalPrice
-            discountPrice
-        } 
-    }`
+    const query = `{ products { id name image originalPrice discountPrice} }`
     
     try {
         const data = await fetchGraphQL(query, "GET")
@@ -30,24 +22,14 @@ async function loadProducts() {
             target.insertAdjacentHTML('afterend', contentToInsert)
         }
         
-        target.remove();
+        target.remove()
     } catch (error) {
         console.error("Error loading products:", error)
     }
 }
 
 async function loadDiscountedProducts() {
-    const query = `{ 
-        products(filter: { 
-            discountedOnly: true 
-        }) { 
-            id 
-            name 
-            image 
-            originalPrice 
-            discountPrice 
-        } 
-    }`
+    const query = `{ products(filter: { discountedOnly: true }) { id name image originalPrice discountPrice } }`
 
     try {
         const data = await fetchGraphQL(query, "GET")
@@ -76,15 +58,8 @@ async function loadDiscountedProducts() {
     }
 }
 
-
 async function loadCategories() {
-    const query = `{ 
-        categories { 
-            id 
-            name 
-            image 
-        } 
-    }`
+    const query = `{ categories { id name image } }`
 
     try {
         const data = await fetchGraphQL(query, "GET")
@@ -93,12 +68,12 @@ async function loadCategories() {
         const target = document.getElementById("loadCategories")
         categories.forEach(category => {
             const contentToInsert = `
-                <div class="category-card" style="background-image: url('./img/placeholder.png'); background-size:cover; background-position: center;">
+                <div class="category-card" style="background-image: url('./img/placeholder.png') background-size:cover background-position: center">
                     <a href="./productGalery.html?categoryId=${category.id}">
                         <p class="category-title">${category.name}</p>
                     </a>
                 </div>
-            `;  
+            `  
             target.insertAdjacentHTML('afterend', contentToInsert)
         })
 
